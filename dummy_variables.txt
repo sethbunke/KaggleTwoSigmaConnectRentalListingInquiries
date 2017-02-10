@@ -1,0 +1,4 @@
+dummy_fields = ['interest_level']
+for each in dummy_fields:
+    dummies = pd.get_dummies(df[each], prefix=each, drop_first=False)
+    df = pd.concat([df, dummies], axis=1)
