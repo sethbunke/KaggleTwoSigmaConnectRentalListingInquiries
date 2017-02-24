@@ -6,7 +6,7 @@ they all sum to 1. This means the output of the softmax function is equivalent t
 probability distribution. It's the perfect function to use as the output activation for a 
 network predicting multiple classes.
 
-
+http://ufldl.stanford.edu/tutorial/supervised/SoftmaxRegression/
 
 #Concise implementation
 def softmax(inputs):
