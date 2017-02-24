@@ -1,0 +1,10 @@
+#Concise implementation
+def softmax(inputs):
+    return np.exp(inputs) / np.sum(np.exp(inputs))
+   
+#Verbose implementation (for clarification/understanding)
+def softmax_verbose(inputs):
+    results = [np.exp(x) for x in inputs]
+    summation = sum(results)    
+    probabilities = [(x / summation) for x in results]
+    return probabilities
