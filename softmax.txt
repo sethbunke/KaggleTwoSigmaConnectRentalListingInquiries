@@ -1,0 +1,20 @@
+TensorFlow Softmax
+You might remember in the Intro to TFLearn lesson we used the softmax function to calculate class 
+probabilities as output from the network. The softmax function squashes it's inputs, typically 
+called logits or logit scores, to be between 0 and 1 and also normalizes the outputs such that 
+they all sum to 1. This means the output of the softmax function is equivalent to a categorical 
+probability distribution. It's the perfect function to use as the output activation for a 
+network predicting multiple classes.
+
+http://ufldl.stanford.edu/tutorial/supervised/SoftmaxRegression/
+
+#Concise implementation
+def softmax(inputs):
+    return np.exp(inputs) / np.sum(np.exp(inputs))
+   
+#Verbose implementation (for clarification/understanding)
+def softmax_verbose(inputs):
+    results = [np.exp(x) for x in inputs]
+    summation = sum(results)    
+    probabilities = [(x / summation) for x in results]
+    return probabilities
